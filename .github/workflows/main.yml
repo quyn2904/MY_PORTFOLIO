@@ -1,11 +1,18 @@
-name: Docker Run on Merge PR
+name: Build And Deploy
 on:
   push:
     branches:
       - main
+
 jobs:
-  docker-run:
+  build:
     runs-on: self-hosted
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Docker build
+        run: docker build -t portfolio .
+
       - name: Docker run
         run: docker run -d --name portfolio-fe -p 3334:80 --rm portfolio
