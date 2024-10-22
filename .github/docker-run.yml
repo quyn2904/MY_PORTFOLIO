@@ -1,0 +1,11 @@
+name: Docker Run on Merge PR
+on:
+  push:
+    branches:
+      - main
+jobs:
+  docker-run:
+    runs-on: self-hosted
+    steps:
+      - name: Docker run
+        run: docker run -d --name stu_startup_fe -p 3333:80 --rm stu_startup_mng_collab_platform
