@@ -15,7 +15,7 @@ jobs:
         run: docker build -t portfolio .
 
       - name: Docker stop old container
-        run: docker container stop portfolio-fe
+        run: docker container stop portfolio-fe || true
 
       - name: Docker run
         run: docker run -d --name portfolio-fe -p 3334:80 --rm portfolio
