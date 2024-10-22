@@ -8,4 +8,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Docker run
-        run: docker run -d --name stu_startup_fe -p 3334:80 --rm stu_startup_mng_collab_platform
+        run: docker run -d --name portfolio-fe -p 3334:80 --rm portfolio
