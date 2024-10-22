@@ -1,10 +1,8 @@
 import {
   createBrowserRouter,
   Navigate,
-  Route,
   RouteObject,
   RouterProvider,
-  Routes,
 } from 'react-router-dom';
 import { HomePage, Login } from '../pages';
 
